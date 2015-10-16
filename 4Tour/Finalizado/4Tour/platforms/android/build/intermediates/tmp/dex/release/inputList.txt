@@ -1,0 +1,2 @@
+/home/mariana/Documents/4607/ownCloud/2.2/App/Labs/Finalizado/4Tour/platforms/android/build/intermediates/classes/release
+/home/mariana/Documents/4607/ownCloud/2.2/App/Labs/Finalizado/4Tour/platforms/android/build/intermediates/pre-dexed/release/classes-21850fc3ac38b1598c49b38be78ce38e511c9405.jar

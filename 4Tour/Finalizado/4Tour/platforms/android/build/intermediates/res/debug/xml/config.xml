@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.forLinux.fourTour" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="Battery">
+        <param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+    <feature name="Vibration">
+        <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="Globalization">
+        <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
+    </feature>
+    <feature name="Accelerometer">
+        <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
+    </feature>
+    <feature name="Compass">
+        <param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Media">
+        <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
+    </feature>
+    <feature name="Contacts">
+        <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
+    </feature>
+    <feature name="Capture">
+        <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
+    </feature>
+    <allow-intent href="market:*" />
+    <name>4Tour - GitLab</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon src="www/img/icon.png" />
+    <icon density="ldpi" platform="android" src="www/img/android/icon_ldpi.png" />
+    <icon density="mdpi" platform="android" src="www/img/android/icon_mdpi.png" />
+    <icon density="hdpi" platform="android" src="www/img/android/icon_hdpi.png" />
+    <icon density="xhdpi" platform="android" src="www/img/android/icon_xhdpi.png" />
+    <icon density="xxhdpi" platform="android" src="www/img/android/icon_xxhdpi.png" />
+    <icon density="xxxhdpi" platform="android" src="www/img/android/icon_xxxhdpi.png" />
+    <preference name="SplashScreenDelay" value="10000" />
+    <splash density="ldpi" platform="android" src="www/img/android/splash/bg_ldpi.png" />
+    <splash density="mdpi" platform="android" src="www/img/android/splash/bg_mdpi.png" />
+    <splash density="hdpi" platform="android" src="www/img/android/splash/bg_hdpi.png" />
+    <splash density="xhdpi" platform="android" src="www/img/android/splash/bg_xhdpi.png" />
+    <splash density="xxhdpi" platform="android" src="www/img/android/splash/bg_xxhdpi.png" />
+    <splash density="xxxhdpi" platform="android" src="www/img/android/splash/bg_xxxhdpi.png" />
+</widget>
+<!-- From: file:/home/mariana/Documents/4607/ownCloud/2.2/App/Labs/Finalizado/My-App/platforms/android/res/xml/config.xml -->

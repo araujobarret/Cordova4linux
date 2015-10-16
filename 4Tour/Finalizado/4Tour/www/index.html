@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+	<head>
+		<meta charset="UTF-8" />
+		<title>First App</title> 
+		<link rel="stylesheet" type="text/css" href="plugins/jqueryMobile/jquery.mobile.custom.structure.css" />
+		<link rel="stylesheet" type="text/css" href="plugins/jqueryMobile/jquery.mobile.custom.theme.css" />
+		<script src="plugins/jquery-1.11.3.min.js"></script>
+		<script src="plugins/jqueryMobile/jquery.mobile.custom.js"></script>
+	</head>
+	<body>
+		<section data-role="page" id="page_inicial">
+			<header data-role="header" data-position="fixed">
+				<h1>Página Inicial</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<a class="ui-btn" href="#page_secundaria">Página Secundária</a>
+                <br/>
+                <a class="ui-btn" href="#page_email">E-mails</a>
+                <br/>
+                <a class="ui-btn" href="#page_form">Formulário</a>
+
+				<p id="ready">Carregando dispositivo...</p>
+
+				<p>Menu</p>
+				<ul data-role="listview">
+					<li>
+						<a href="#page_dispositivo">Dispositivo</a>
+					</li>
+					<li>
+						<a href="#page_bateria">Bateria</a>
+					</li>
+					<li>
+						<a href="#page_rede">Rede</a>
+					</li>
+					<li>
+						<a href="#page_vibrar">Vibração</a>
+					</li>
+					<li>
+						<a href="#page_dialogo">Diálogo</a>
+					</li>
+					<li>
+						<a href="#page_linkbrowser">Link em Browser</a>
+					</li>
+					<li>
+						<a href="#page_geolocalizacao">Geolocalização</a>
+					</li>
+					<li>
+						<a href="#page_globalizacao">Globalização</a>
+					</li>
+					<li>
+						<a href="#page_acelerometro">Acelerômetro</a>
+					</li>
+					<li>
+						<a href="#page_orientacao">Orientação</a>
+					</li>
+					<li>
+						<a href="#page_bussola">Bússola</a>
+					</li>
+					<li>
+						<a href="#page_camera">Câmera</a>
+					</li>
+					<li>
+						<a href="#page_audio">Áudio</a>
+					</li>
+					<li>
+						<a href="#page_captura_midia">Captura de Mídia</a>
+					</li>
+					<li>
+						<a href="#page_contatos">Contatos</a>
+					</li>
+					<li>
+						<a href="#page_sistema_arquivos">Sistema de Arquivos</a>
+					</li>
+					<li>
+						<a href="#page_integracao">Integração</a>
+					</li>
+				</ul>
+			</div>
+			<footer data-role="footer" data-position="fixed">
+				<p>Rodapé</p>
+			</footer>
+		</section>
+
+		<section data-role="page" id="page_secundaria">
+			<header data-role="header" data-position="fixed">
+				<h1>Página Secundária</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<p>Corpo</p>
+				<a class="ui-btn" href="#page_inicial">Página Inicial</a>
+			</div>
+			<footer data-role="footer" data-position="fixed">
+				<p>Rodapé</p>
+			</footer>
+		</section>
+
+		<section data-role="page" id="page_email">
+			<header data-role="header" data-position="fixed">
+				<h1>E-mail</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<ul data-role="listview" data-split-icon="mail">
+					<li>
+						<a href="">
+							<h2>Fulano</h2>
+							<p><strong>Administrador</strong></p>
+						</a>
+						<a href="mailto:fulano@dexter.com">E-mail</a>
+					</li>
+					<li>
+						<a href="">
+							<h2>João</h2>
+							<p><strong>Motorista</strong></p>
+						</a>
+						<a href="mailto:joao@dexter.com">E-mail</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_form">
+			<header data-role="header" data-position="fixed">
+				<h1>Formulário</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<form action="">
+					<label for="email">Email</label>
+					<input name="email" id="email" type="email" value="" />
+					<label for="password">Senha:</label>
+					<input name="password" id="password" type="password" value="" autocomplete="off" />
+					<input type="submit" value="Login" />
+				</form>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_dispositivo">
+			<header data-role="header" data-position="fixed">
+				<h1>Dispositivo</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<p id="device">Carregando informações sobre o dispositivo...</p>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_bateria">
+			<header data-role="header" data-position="fixed">
+				<h1>Bateria</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<p id="battery">Carregando informações sobre a bateria...</p>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_rede">
+			<header data-role="header" data-position="fixed">
+				<h1>Rede - Internet</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<p id="network">Carregando informações sobre a rede...</p>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_vibrar">
+			<header data-role="header" data-position="fixed">
+				<h1>Vibrar</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<p>Aperte os botões abaixo</p>
+
+				<a class="ui-btn" href="" id="button_vibra">Vibrar</a>
+				<a class="ui-btn" href="" id="button_nao_vibra">Parar vibração</a>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_dialogo">
+			<header data-role="header" data-position="fixed">
+				<h1>Diálogo</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<p>Aperte os botões abaixo</p>
+
+				<a class="ui-btn" href="" id="button_alert">Alerta</a>
+				<a class="ui-btn" href="" id="button_confirm">Confirmação</a>
+				<a class="ui-btn" href="" id="button_prompt">Prompt</a>
+				<a class="ui-btn" href="" id="button_beep">Beep</a>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_linkbrowser">
+			<header data-role="header" data-position="fixed">
+				<h1>Link em Browser</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<p>Aperte os botões abaixo</p>
+
+				<a class="ui-btn" href="" id="button_linkbrowser1">Abrir Link 1 (no)</a>
+				<a class="ui-btn" href="" id="button_linkbrowser2">Abrir Link 2 (yes)</a>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_geolocalizacao">
+			<header data-role="header" data-position="fixed">
+				<h1>Geolocalização</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<div id="inicial"><p>Carregando Geolocalização</p></div>
+				<div id="atual"></div>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_globalizacao">
+			<header data-role="header" data-position="fixed">
+				<h1>Globalização</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<p id="globalizacao">Carregando Globalização</p>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_acelerometro">
+			<header data-role="header" data-position="fixed">
+				<h1>Acelerômetro</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<div id="inicial"><p>Carregando Acelerômetro</p></div>
+				<div id="atual"></div>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_orientacao">
+			<header data-role="header" data-position="fixed">
+				<h1>Orientação</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<div id="inicial"><p>Carregando Orientação</p></div>
+				<div id="atual"></div>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_bussola">
+			<header data-role="header" data-position="fixed">
+				<h1>Bússola</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<div>
+					<p id="posicao_bussola">Carregando posição</p>
+					<img src="img/images/bussola_320.png" alt="Bussola" id="bussola" />
+				</div>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_camera">
+			<header data-role="header" data-position="fixed">
+				<h1>Câmera</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<button class="ui-btn" id="tirar_foto">Tirar foto</button>
+				<img id="foto" />
+			</div>
+		</section>
+
+		<section data-role="page" id="page_audio">
+			<header data-role="header" data-position="fixed">
+				<h1>Áudio</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<button class="ui-btn" id="gravar_audio">Gravar Áudio</button>
+				<p id="info_gravacao"></p>
+				<br/>
+				<button class="ui-btn" id="stop_gravar">Parar Gravação</button>
+				<br/>
+				<button class="ui-btn" id="exec_audio">Executar Áudio</button>
+				<p id="audio_position"></p>
+				<p id="info_execucao"></p>
+				<br/>
+				<button class="ui-btn" id="pause_audio">Pausar Áudio</button>
+				<br/>
+				<button class="ui-btn" id="stop_audio">Parar Áudio</button>
+				<br/>
+				<button class="ui-btn" id="mute_audio">Mutar Áudio</button>
+				<br/>
+				<button class="ui-btn" id="unmute_audio">Tirar do mudo o Áudio</button>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_captura_midia">
+			<header data-role="header" data-position="fixed">
+				<h1>Captura de Mídia</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<button class="ui-btn" id="capture_audio">Gravar Audio</button>
+				<div id="put_audio"></div>
+				<br/>
+				<button class="ui-btn" id="capture_picture">Tirar Foto</button>
+				<div id="put_foto"></div>
+				<br/>
+				<button class="ui-btn" id="capture_video">Gravar Video</button>
+				<div id="put_video"></div>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_contatos">
+			<header data-role="header" data-position="fixed">
+				<h1>Contatos</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<a class="ui-btn" href="#page_form_contato">Adicionar Contato</a>
+				<br/>
+				<a class="ui-btn" href="#page_find_contato">Procurar Contato</a>
+				<br/>
+				<a class="ui-btn" href="#page_pick_contato">Pegar Contato</a>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_form_contato">
+			<header data-role="header" data-position="fixed">
+				<h1>Adicionar Contatos</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<h3>URL Foto</h3>
+				<textarea name="save_foto_contato" id="save_foto_contato"></textarea>
+
+				<h3>Nome</h3>
+				<label for="save_prefixo_contato">Prefixo Contato (Sr. Dr.):</label>
+				<input type="text" name="save_prefixo_contato" id="save_prefixo_contato" />
+				<br/>
+				<label for="save_nome_contato">Nome Contato:</label>
+				<input type="text" name="save_nome_contato" id="save_nome_contato" />
+				<br/>
+				<label for="save_nome_meio_contato">Nome do Meio Contato:</label>
+				<input type="text" name="save_nome_meio_contato" id="save_nome_meio_contato" />
+				<br/>
+				<label for="save_sobrenome_contato">Sobrenome Contato:</label>
+				<input type="text" name="save_sobrenome_contato" id="save_sobrenome_contato" />
+				<br/>
+				<label for="save_sufixo_contato">Sufixo Contato (Jr., Filho, Neto, Sobrinho):</label>
+				<input type="text" name="save_sufixo_contato" id="save_sufixo_contato" />
+				<br/>
+				<label for="save_apelido_contato">Apelido Contato:</label>
+				<input type="text" name="save_apelido_contato" id="save_apelido_contato" />
+				<br/>
+				<label for="save_nome_exibicao_contato">Nome Exibição:</label>
+				<input type="text" name="save_nome_exibicao_contato" id="save_nome_exibicao_contato" />
+				<br/>
+
+				<h3>Telefones</h3>
+				<label for="save_cel_contato">Celular:</label>
+				<input type="text" name="save_cel_contato" id="save_cel_contato" />
+				<br/>
+				<label for="save_tel_contato">Residencial:</label>
+				<input type="text" name="save_tel_contato" id="save_tel_contato" />
+				<br/>
+				<label for="save_trab_contato">Trabalho:</label>
+				<input type="text" name="save_trab_contato" id="save_trab_contato" />
+				<br/>
+
+				<h3>Emails</h3>
+				<label for="save_email_contato">Pessoal:</label>
+				<input type="text" name="save_email_contato" id="save_email_contato" />
+				<br/>
+				<label for="save_emailtrab_contato">Trabalho:</label>
+				<input type="text" name="save_emailtrab_contato" id="save_emailtrab_contato" />
+				<br/>
+
+				<h3>Endereço Residencial</h3>
+				<label for="save_endres_contato">Avenida/Rua:</label>
+				<input type="text" name="save_endres_contato" id="save_endres_contato" />
+				<br/>
+				<label for="save_endres_num_contato">Número e complemento:</label>
+				<input type="text" name="save_endres_num_contato" id="save_endres_num_contato" />
+				<br/>
+				<label for="save_endres_cidade_contato">Cidade:</label>
+				<input type="text" name="save_endres_cidade_contato" id="save_endres_cidade_contato" />
+				<br/>
+				<label for="save_endres_estado_contato">Estado:</label>
+				<input type="text" name="save_endres_estado_contato" id="save_endres_estado_contato" />
+				<br/>
+				<label for="save_endres_cep_contato">CEP:</label>
+				<input type="text" name="save_endres_cep_contato" id="save_endres_cep_contato" />
+				<br/>
+				<label for="save_endres_pais_contato">País:</label>
+				<input type="text" name="save_endres_pais_contato" id="save_endres_pais_contato" />
+				<br/>
+
+				<h3>Endereço Comercial</h3>
+				<label for="save_endtrab_contato">Avenida/Rua:</label>
+				<input type="text" name="save_endtrab_contato" id="save_endtrab_contato" />
+				<br/>
+				<label for="save_endtrab_num_contato">Número e complemento:</label>
+				<input type="text" name="save_endtrab_num_contato" id="save_endtrab_num_contato" />
+				<br/>
+				<label for="save_endtrab_cidade_contato">Cidade:</label>
+				<input type="text" name="save_endtrab_cidade_contato" id="save_endtrab_cidade_contato" />
+				<br/>
+				<label for="save_endtrab_estado_contato">Estado:</label>
+				<input type="text" name="save_endtrab_estado_contato" id="save_endtrab_estado_contato" />
+				<br/>
+				<label for="save_endtrab_cep_contato">CEP:</label>
+				<input type="text" name="save_endtrab_cep_contato" id="save_endtrab_cep_contato" />
+				<br/>
+				<label for="save_endtrab_pais_contato">País:</label>
+				<input type="text" name="save_endtrab_pais_contato" id="save_endtrab_pais_contato" />
+				<br/>
+
+				<h3>Informações Profissionais</h3>
+				<label for="save_work_empresa">Empresa:</label>
+				<input type="text" name="save_work_empresa" id="save_work_empresa" />
+				<br/>
+				<label for="save_work_departamento">Departamento:</label>
+				<input type="text" name="save_work_departamento" id="save_work_departamento" />
+				<br/>
+				<label for="save_work_cargo">Cargo:</label>
+				<input type="text" name="save_work_cargo" id="save_work_cargo" />
+				<br/>
+
+				<h3>URLs</h3>
+				<label for="save_url1_contato">URL 1:</label>
+				<input type="text" name="save_url1_contato" id="save_url1_contato" />
+				<br/>
+				<label for="save_url2_contato">URL 2:</label>
+				<input type="text" name="save_url2_contato" id="save_url2_contato" />
+				<br/>
+
+				<h3>IMs</h3>
+				<label for="save_im1_contato">IM 1:</label>
+				<input type="text" name="save_im1_contato" id="save_im1_contato" />
+				<br/>
+				<label for="save_im2_contato">IM 2:</label>
+				<input type="text" name="save_im2_contato" id="save_im2_contato" />
+				<br/>
+
+				<h3>Detalhes</h3>
+				<textarea name="save_info_details" id="save_info_details"></textarea>
+
+				<button class="ui-btn" id="save_contato">Salvar Contato</button>
+				<p id="info_save_contato"></p>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_find_contato">
+			<header data-role="header" data-position="fixed">
+				<h1>Procurar Contato</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<h3>Procurar Contato</h3>
+				<label for="find_nome_contato">Nome Contato:</label>
+				<input type="text" name="find_nome_contato" id="find_nome_contato" />
+				<br/>
+				<button class="ui-btn" id="find_contato">Procurar Contato</button>
+				<p id="info_find_contato"></p>
+				<br/>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_pick_contato">
+			<header data-role="header" data-position="fixed">
+				<h1>Pegar Informações do Contato</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<button id="pickContact">Selecionar Contato</button>
+				<div id="selectedContact"></div>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_sistema_arquivos">
+			<header data-role="header" data-position="fixed">
+				<h1>Sistema de Arquivos</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<button class="ui-btn" id="requestFileSystem_persistent">Criar pasta em Persistent e arquivo</button>
+				<p id="info_requestFileSystem_persistent"></p>
+				<p id="info_directoryEntry_persistent"></p>
+				<p id="info_writeFile_persistent"></p>
+				<br/>
+				<button class="ui-btn" id="listar_requestFileSystem_persistent">Listar pasta em Persistent e arquivos</button>
+				<p id="info_listar_requestFileSystem_persistent"></p>
+				<br/>
+				<button class="ui-btn" id="delete_requestFileSystem_persistent">Apagar pasta em Persistent e arquivos</button>
+				<p id="info_delete_requestFileSystem_persistent"></p>
+				<br/>
+				<button class="ui-btn" id="requestFileSystem_temporary">Criar pasta em Temporary e arquivo</button>
+				<p id="info_requestFileSystem_temporary"></p>
+				<p id="info_directoryEntry_temporary"></p>
+				<p id="info_writeFile_temporary"></p>
+				<br/>
+				<button class="ui-btn" id="listar_requestFileSystem_temporary">Listar pasta em Temporary e arquivos</button>
+				<p id="info_listar_requestFileSystem_temporary"></p>
+				<br/>
+				<button class="ui-btn" id="delete_requestFileSystem_temporary">Apagar pasta em Temporary e arquivos</button>
+				<p id="info_delete_requestFileSystem_temporary"></p>
+			</div>
+		</section>
+
+		<section data-role="page" id="page_integracao">
+			<header data-role="header" data-position="fixed">
+				<h1>Procurar CEP</h1>
+			</header>
+			<div data-role="main" class="ui-content">
+				<label for="field_cep">CEP:</label>
+				<input type="text" name="field_cep" id="field_cep" />
+				<br/>
+				<button class="ui-btn" id="find_cep">Procurar</button>
+				<p id="info_find_cep"></p>
+			</div>
+		</section>
+
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>

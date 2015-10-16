@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.forLinux.fourTour" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>4Tour - GitLab</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+
+    <icon src="www/img/icon.png" />
+
+    <!-- ANDROID -->
+    <icon src="www/img/android/icon_ldpi.png"    platform="android" density="ldpi"    />
+    <icon src="www/img/android/icon_mdpi.png"    platform="android" density="mdpi"    />
+    <icon src="www/img/android/icon_hdpi.png"    platform="android" density="hdpi"    />
+    <icon src="www/img/android/icon_xhdpi.png"   platform="android" density="xhdpi"   />
+    <icon src="www/img/android/icon_xxhdpi.png"  platform="android" density="xxhdpi"  />
+    <icon src="www/img/android/icon_xxxhdpi.png" platform="android" density="xxxhdpi" />
+
+    <preference name="SplashScreenDelay" value="10000" />
+    <splash src="www/img/android/splash/bg_ldpi.png"    platform="android" density="ldpi"    />
+    <splash src="www/img/android/splash/bg_mdpi.png"    platform="android" density="mdpi"    />
+    <splash src="www/img/android/splash/bg_hdpi.png"    platform="android" density="hdpi"    />
+    <splash src="www/img/android/splash/bg_xhdpi.png"   platform="android" density="xhdpi"   />
+    <splash src="www/img/android/splash/bg_xxhdpi.png"  platform="android" density="xxhdpi"  />
+    <splash src="www/img/android/splash/bg_xxxhdpi.png" platform="android" density="xxxhdpi" />
+</widget>

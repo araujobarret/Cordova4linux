@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>First App</title> 
+        <link rel="stylesheet" type="text/css" href="plugins/jqueryMobile/jquery.mobile.custom.structure.css" />
+        <link rel="stylesheet" type="text/css" href="plugins/jqueryMobile/jquery.mobile.custom.theme.css" />
+        <script src="plugins/jquery-1.11.3.min.js"></script>
+        <script src="plugins/jqueryMobile/jquery.mobile.custom.js"></script>
+    </head>
+    <body>
+        <section data-role="page" id="page_inicial">
+            <header data-role="header" data-position="fixed">
+                <h1>Página Inicial</h1>
+            </header>
+            <div data-role="main" class="ui-content">
+                <a class="ui-btn" href="#page_secundaria">Página Secundária</a>
+                <br/>
+                <a class="ui-btn" href="#page_email">E-mails</a>
+                <br/>
+                <a class="ui-btn" href="#page_form">Formulário</a>
+                <br/>
+                <p>Menu</p>
+                <ul data-role="listview">
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 3</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 4</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 5</a>
+                    </li>
+                </ul>
+            </div>
+            <footer data-role="footer" data-position="fixed">
+                <p>Rodapé</p>
+            </footer>
+        </section>
+
+        <section data-role="page" id="page_secundaria">
+            <header data-role="header" data-position="fixed">
+                <h1>Página Secundária</h1>
+            </header>
+            <div data-role="main" class="ui-content">
+                <p>Corpo</p>
+                <a class="ui-btn" href="#page_inicial">Página Inicial</a>
+            </div>
+            <footer data-role="footer" data-position="fixed">
+                <p>Rodapé</p>
+            </footer>
+        </section>
+
+        <section data-role="page" id="page_email">
+            <ul data-role="listview" data-split-icon="mail">
+                <li>
+                    <a href="">
+                        <h2>Fulano</h2>
+                        <p><strong>Administrador</strong></p>
+                    </a>
+                    <a href="mailto:fulano@dexter.com">E-mail</a>
+                </li>
+                <li>
+                    <a href="">
+                        <h2>João</h2>
+                        <p><strong>Motorista</strong></p>
+                    </a>
+                    <a href="mailto:joao@dexter.com">E-mail</a>
+                </li>
+            </ul>
+        </section>
+
+        <section data-role="page" id="page_form">
+            <header data-role="header" data-position="fixed">
+                <h1>Formulário</h1>
+            </header>
+            <div data-role="main" class="ui-content">
+                <form action="">
+                    <label for="email">Email</label>
+                    <input name="email" id="email" type="email" value="" />
+                    <label for="password">Senha:</label>
+                    <input name="password" id="password" type="password" value="" autocomplete="off" />
+                    <input type="submit" value="Login" />
+                </form>
+            </div>
+        </section>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/mariana/Documents/4607/ownCloud/2.2/App/Labs/Lab 07/My-App/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6ef595b03a584877bee355fdc7f8849a502b46fb">
+        <dex dex="/home/mariana/Documents/4607/ownCloud/2.2/App/Labs/Lab 07/My-App/platforms/android/build/intermediates/pre-dexed/debug/classes-dfe2bda0cbaf8149b354226b6b99408cd1f99a60.jar" />
+    </item>
+
+</items>

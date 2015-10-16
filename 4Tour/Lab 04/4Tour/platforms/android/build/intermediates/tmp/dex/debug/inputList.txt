@@ -1,0 +1,2 @@
+/home/mariana/Documents/4607/ownCloud/2.2/App/Labs/Lab 04/My-App/platforms/android/build/intermediates/classes/debug
+/home/mariana/Documents/4607/ownCloud/2.2/App/Labs/Lab 04/My-App/platforms/android/build/intermediates/pre-dexed/debug/classes-748d00def631248a2b1dfc5e4df7eb957b10355c.jar
