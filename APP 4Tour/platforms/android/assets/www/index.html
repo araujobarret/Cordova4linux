@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <link rel="stylesheet" href="plugins/jquery.mobile-1.4.5.css" />
     <script src="plugins/jquery-2.2.4.min.js" type="text/javascript"></script>   
-    <script src="plugins/jquery.mobie-1.4.5.min.js" type="text/javascript"></script>    
+    <script src="plugins/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale-1">
     <title>App 4Tour</title>
 </head>
 <body>
-    <section data-role="page">
-        <header data-role="header" data-position="fixed">
-            <p>Cabeçalho</p>
-        </header>
-        <div data-role="main" data-position="fixed"> 
-            <p>Corpo</p>
-        </div>
-        <footer data-role="footer" data-position="fixed">
-            <p>Rodapé</p>
-        </footer>
+
+    <section data-role="page" id="secundaria">
+        <a href="#email" class="ui-btn">Email</a>
+        <a href="#formulario" class="ui-btn">Formulário</a>
     </section>
+
+
+    <section data-role="page" id="email">
+        <a href="#secundaria" id class="ui-btn">Secundaria</a>
+        <a href="#formulario" class="ui-btn">Formulário</a>
+        <ul data-role="listview" data-split-icon="mail">
+            <li>
+                <a href="">
+                    <h2>Mail</h2>
+                    <p>email do malaco</p>
+                </a>
+                <a href="mailto:mail@mail.com">Email</a>
+            </li>
+        </ul>   
+    </section>
+
+    <section data-role="page" id="formulario">
+        <a href="#secundaria" id class="ui-btn">Secundaria</a>
+        <a href="#email" class="ui-btn">Email</a>
+    </section>
+
 </body>
 </html>
