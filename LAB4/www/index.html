@@ -19,12 +19,10 @@
         <br/>
         <p id="ready" style="margin: 0 auto; text-align: center">Carregando...</p>
         <br/>
-        <a href="#email" class="ui-btn">Email</a>
-        <a href="#formulario" class="ui-btn">Formulário</a>
 
         <ul data-role="listview">
             <li><a href="#dispositivo">Dispositivo</a></li>
-            <li><a href="#">Item 2</a></li>
+            <li><a href="#bateria">Bateria</a></li>
         </ul>       
         <footer data-role="footer" data-position="fixed">
             <h2>Footer</h2>
@@ -43,52 +41,20 @@
             <h2>Footer</h2>
         </footer>  
     </section>
-        
-    <section data-role="page" id="email">
+    
+    <section data-role="page" id="bateria">
         <header data-role="header">
             <h2>Topo</h2>
         </header>
+
+        <p id="infoBateria"></p>
         
-        <a href="#secundaria" id class="ui-btn">Secundaria</a>
-        <a href="#formulario" class="ui-btn">Formulário</a>
-        <ul data-role="listview" data-split-icon="mail">
-            <li>
-                <a href="">
-                    <h2>Mail</h2>
-                    <p>email do malaco</p>
-                </a>
-                <a href="mailto:mail@mail.com">Email</a>
-            </li>
-            <li>
-                <a href="">
-                    <h2>Mail2</h2>
-                    <p>email do outro malaco</p>
-                </a>
-                <a href="mailto:mail2@mail.com">Email</a>
-            </li>
-        </ul> 
+        <a href="#secundaria" class="ui-btn">Voltar</a>
         <footer data-role="footer" data-position="fixed">
             <h2>Footer</h2>
         </footer>  
-    </section>
-
-    <section data-role="page" id="formulario">
-        <header data-role="header">
-            <h2>Topo</h2>
-        </header>
-        <a href="#secundaria" id class="ui-btn">Secundaria</a>
-        <a href="#email" class="ui-btn">Email</a>
-
-        <form action="">
-            <label for="email">Email:</label>   
-            <input name="email" id="email" type="email" value=""/>
-            <label for="senha">Senha:</label>   
-            <input name="senha" id="senha" type="password" value="" autocomplete="off" />
-            <input type="submit" value="login" />
-        </form>
-        <footer data-role="footer" data-position="fixed">
-            <h2>Footer</h2>
-        </footer>
-    </section>    
+    </section>  
+    
+    
 </body>
 </html>

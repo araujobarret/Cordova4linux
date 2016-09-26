@@ -10,6 +10,7 @@ var app = {
 	onDeviceReady: function(){
 		app.receivedEvent();
 		app.onDeviceInfo();
+		app.onBatteryInfo();
 	},
 	receivedEvent: function(){
 		var pronto = document.getElementById("secundaria").querySelector("#ready");
@@ -31,7 +32,18 @@ var app = {
 		dispositivo.innerHTML += "<br/>UUID: " + device.uuid;
 		dispositivo.innerHTML += "<br/>Versao: " + device.version;
 		dispositivo.innerHTML += "<br/>Modelo: " + device.model;
+	},
+	onBatteryInfo: function(){
+		window.addEventListener(
+			"batterystatus",
+			function(info){
+				var bateria = document.getElementById("bateria").querySelector("#infoBateria");
+				var conectado = (info.isPlugged) ? "Carregando..." : "Não conectado";
+				bateria = conectado + "<br/>Porcentagem da bateria: " + info.level + "%";
+			},
+			false
+		);
 	}
-}
+};
 
 app.init();
