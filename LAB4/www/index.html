@@ -3,7 +3,9 @@
 <head>
     <link rel="stylesheet" href="plugins/jquery.mobile-1.4.5.css" />
     <script src="plugins/jquery-2.2.4.min.js" type="text/javascript"></script>   
-    <script src="plugins/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>    
+    <script src="plugins/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>  
+    <script src="cordova.js"></script>
+    <script src="js/script.js"></script>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale-1">
     <title>App 4Tour</title>
@@ -21,16 +23,27 @@
         <a href="#formulario" class="ui-btn">Formulário</a>
 
         <ul data-role="listview">
-            <li><a href="#">Item 1</a></li>
+            <li><a href="#dispositivo">Dispositivo</a></li>
             <li><a href="#">Item 2</a></li>
-        </ul>
-
+        </ul>       
         <footer data-role="footer" data-position="fixed">
             <h2>Footer</h2>
         </footer>
     </section>
+    
+    <section data-role="page" id="dispositivo">
+        <header data-role="header">
+            <h2>Topo</h2>
+        </header>
 
-
+        <p id="info"></p>
+        
+        <a href="#secundaria" class="ui-btn">Voltar</a>
+        <footer data-role="footer" data-position="fixed">
+            <h2>Footer</h2>
+        </footer>  
+    </section>
+        
     <section data-role="page" id="email">
         <header data-role="header">
             <h2>Topo</h2>
@@ -76,8 +89,6 @@
         <footer data-role="footer" data-position="fixed">
             <h2>Footer</h2>
         </footer>
-    </section>
-    <script src="cordova.js"></script>
-    <script src="js/script.js"></script>
+    </section>    
 </body>
 </html>
