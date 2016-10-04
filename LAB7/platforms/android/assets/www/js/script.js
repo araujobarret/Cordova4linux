@@ -7,6 +7,7 @@ var app = {
 	},
 	onDeviceReady: function(){
 		app.geo();
+		app.globalization();
 	},
 	geo: function()
 	{
@@ -27,16 +28,101 @@ var app = {
 			}
 		);
 
-	geo.watchPosition(
+		geo.watchPosition(
 			function(pos){
 				info2.innerHTML = "Posicao Atual <br/> Latitude: " + pos.coords.latitude;
 				info2.innerHTML += "<br/>Longitude: " + pos.coords.longitude;
 				info2.innerHTML += "<br/>Precisão: " + pos.coords.accuracy;
 				info2.innerHTML += "<br/>Data: " + converteData(pos.timestamp);
+				info2.innerHTML += "<br/>Velocidade:" + pos.coords.speed + "m/s";
 			},
 			function(error){
 				info2.innerHTML = "Erro ao obter a geolocalização.<br/>Código: " + error.code;
 				info2.innerHTML += "<br/>Mensagem: " + error.message;
+			}
+		);
+
+	},
+	globalization: function(){
+		var info = document.getElementById("globalizationInfo");
+		var glob = navigator.globalization;
+
+		glob.getPreferredLanguage(
+			function(lang){
+				info.innerHTML = "Lingua: " + lang.value + "<br/>";
+			},
+			function(){
+				info.innerHTML = "Erro ao obter idioma";
+			}
+		);
+
+		glob.getLocaleName(
+			function(local){
+				info.innerHTML += "Local: " + local.value + "<br/>";
+			},
+			function(){
+				info.innerHTML += "Erro ao obter o local";
+			}
+		);
+
+		glob.dateToString(
+			new Date(),
+			function(data){
+				info.innerHTML += "Data: " + data.value + "<br/>";
+			},
+			function(){
+				info.innerHTML += "Erro ao obter a data em string";
+			},
+			{
+				formatLength: "short",
+				selector: "date and time"
+			}
+		);
+
+		glob.getFirstDayOfWeek(
+			function(day){
+				var weekDay = day.value;
+				var dayWeek;
+
+				switch(weekDay)
+				{
+					case 1:
+						dayWeek = "Domingo";
+					break;
+					case 2:
+						dayWeek = "Segunda";
+					break;
+					case 3:
+						dayWeek = "Terça";
+					break;
+					case 4:
+						dayWeek = "Quarta";
+					break;
+					case 5:
+						dayWeek = "Quinta";
+					break;
+					case 6:
+						dayWeek = "Sexta";
+					break;
+					case 7:
+						dayWeek = "Sábado";
+					break;					
+				}
+				info.innerHTML += "Primeiro dia da semana: " + dayWeek + "<br/>";
+			},
+			function(){
+				info.innerHTML += "Erro ao obter o primeiro dia da semana";
+			}
+		);
+
+		glob.isDayLightSavingsTime(
+			new Date(),
+			function(data){
+				var horarioVerao = (data.dst) ? "Sim" : "Não";
+				info.innerHTML += "Estamos em horário de verão: " + horarioVerao + "<br/>";
+			},
+			function(){
+				info.innerHTML += "Erro ao obter informação sobre o horário de verão";
 			}
 		);
 
