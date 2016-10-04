@@ -7,6 +7,7 @@ var app = {
 	},
 	onDeviceReady: function(){
 		app.dialogs();
+		app.linkInBrowser();
 	},
 	dialogs: function()	{
 		var btn_alerta = document.getElementById("alerta");
@@ -51,8 +52,18 @@ var app = {
 		btn_beep.addEventListener("click", function(){
 			navigator.notification.beep(3);	
 		}, false);
+	},
+	linkInBrowser: function(){
+		var yes = document.getElementById("inappbrowser_yes");
+		var no = document.getElementById("inappbrowser_no");
+
+		yes.addEventListener("click", function(){
+			window.open = cordova.InAppBrowser.open("http://www.google.com", "_self", "location=yes");
+		},false);
+		no.addEventListener("click", function(){
+			window.open = cordova.InAppBrowser.open("http://www.google.com", "_self", "location=no");
+		},false);
 	}
-	
 };
 
 app.init();
