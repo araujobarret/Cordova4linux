@@ -16,6 +16,14 @@
     <feature name="Vibration">
         <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
     </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
     <name>HelloCordova</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -31,6 +39,22 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <icon src="www/img/icon.png" />
     <allow-intent href="market:*" />
+    <icon density="ldpi" src="www/img/android/icon_ldpi.png" />
+    <icon density="mdpi" src="www/img/android/icon_mdpi.png" />
+    <icon density="hdpi" src="www/img/android/icon_hdpi.png" />
+    <icon density="xhdpi" src="www/img/android/icon_xhdpi.png" />
+    <icon density="xxhdpi" src="www/img/android/icon_xxhdpi.png" />
+    <icon density="xxxhdpi" src="www/img/android/icon_xxxhdpi.png" />
+    <splash density="ldpi" src="www/img/android/splash/bg_ldpi.png" />
+    <splash density="mdpi" src="www/img/android/splash/bg_mdpi.png" />
+    <splash density="hdpi" src="www/img/android/splash/bg_hdpi.png" />
+    <splash density="xhdpi" src="www/img/android/splash/bg_xhdpi.png" />
+    <splash density="xxhdpi" src="www/img/android/splash/bg_xxhdpi.png" />
+    <splash density="xxxhdpi" src="www/img/android/splash/bg_xxxhdpi.png" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="SplashMantainAspectRatio" value="true" />
 </widget>

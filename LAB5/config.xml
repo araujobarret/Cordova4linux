@@ -16,8 +16,30 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="SplashMantainAspectRatio" value="true" />
+
+    <icon src="www/img/icon.png" />
+
     <platform name="android">
         <allow-intent href="market:*" />
+        
+        <icon src="www/img/android/icon_ldpi.png" density="ldpi" />
+        <icon src="www/img/android/icon_mdpi.png" density="mdpi" />
+        <icon src="www/img/android/icon_hdpi.png" density="hdpi" />
+        <icon src="www/img/android/icon_xhdpi.png" density="xhdpi" />
+        <icon src="www/img/android/icon_xxhdpi.png" density="xxhdpi" />
+        <icon src="www/img/android/icon_xxxhdpi.png" density="xxxhdpi" />
+
+        <splash src="www/img/android/splash/bg_ldpi.png" density="ldpi" />
+        <splash src="www/img/android/splash/bg_mdpi.png" density="mdpi" />
+        <splash src="www/img/android/splash/bg_hdpi.png" density="hdpi" />
+        <splash src="www/img/android/splash/bg_xhdpi.png" density="xhdpi" />
+        <splash src="www/img/android/splash/bg_xxhdpi.png" density="xxhdpi" />
+        <splash src="www/img/android/splash/bg_xxxhdpi.png" density="xxxhdpi" />
+
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
