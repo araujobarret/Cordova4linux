@@ -9,6 +9,7 @@ var app = {
 		app.geo();
 		app.globalization();
 		app.accel();
+		app.orientation();
 	},
 	geo: function()
 	{
@@ -153,6 +154,35 @@ var app = {
 			},
 			{
 				frequency: 1000
+			}
+		);
+
+	},
+	orientation: function(){
+		var info = document.getElementById("orientationInfo");
+
+		var orientacao = navigator.compass;
+
+		orientacao.getCurrentHeading(
+			function(heading)
+			{
+				info.innerHTML = "Orientação inicial<br/>Grau de orientação: " + heading.magneticHeading;
+			},
+			function(){
+				alert("Erro");
+			}
+		);
+
+		orientacao.watchHeading(
+			function(heading)
+			{
+				info.innerHTML += "<br/>Orientação atual<br/>Grau de orientação: " + heading.magneticHeading;
+			},
+			function(){
+				alert("Erro");
+			},
+			{
+				frequency: 10000
 			}
 		);
 
