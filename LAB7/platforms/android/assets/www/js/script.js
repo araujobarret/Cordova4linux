@@ -8,6 +8,7 @@ var app = {
 	onDeviceReady: function(){
 		app.geo();
 		app.globalization();
+		app.accel();
 	},
 	geo: function()
 	{
@@ -123,6 +124,35 @@ var app = {
 			},
 			function(){
 				info.innerHTML += "Erro ao obter informação sobre o horário de verão";
+			}
+		);
+
+	},
+	accel: function(){
+		var info = document.getElementById("accelInfo");
+		navigator.accelerometer.getCurrentAcceleration (
+			function(acceleration){
+				info.innerHTML = "Acelerometro inicial<br/>Aceleração x: " + acceleration.x;
+				info.innerHTML += "<br/>Aceleração y: " + acceleration.y;
+				info.innerHTML += "<br/>Aceleração z: " + acceleration.z;
+				info.innerHTML += "<br/>Aceleração tempo: " + acceleration.timestamp;
+			}, function()
+			{
+				alert("Erro");
+			}
+		);
+
+		navigator.accelerometer.watchAcceleration (
+			function(acceleration){
+				info.innerHTML += "<br/>Acelerometro atual<br/>Aceleração x: " + acceleration.x;
+				info.innerHTML += "<br/>Aceleração y: " + acceleration.y;
+				info.innerHTML += "<br/>Aceleração z: " + acceleration.z;
+				info.innerHTML += "<br/>Aceleração tempo: " + acceleration.timestamp;
+			}, function() {
+				alert("Erro");
+			},
+			{
+				frequency: 1000
 			}
 		);
 
